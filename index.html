@@ -426,6 +426,82 @@
 
     .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
+
+    /* ===== EMPREINTE OFFICIELLE DIGIY ===== */
+    .digiyOfficial{
+      margin-top:16px;
+      display:grid;
+      gap:10px;
+      padding:16px;
+      border-radius:22px;
+      border:1px solid rgba(212,175,55,.34);
+      background:
+        radial-gradient(460px 180px at 0% 0%,rgba(212,175,55,.15),transparent 62%),
+        rgba(0,0,0,.18);
+    }
+
+    .digiyOfficialTop{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      align-items:center;
+    }
+
+    .digiySeal{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      min-height:38px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:linear-gradient(135deg,rgba(249,115,22,.20),rgba(212,175,55,.18));
+      border:1px solid rgba(243,212,107,.42);
+      color:#fff7c2;
+      font-size:14px;
+      font-weight:1000;
+      text-transform:uppercase;
+      letter-spacing:.06em;
+    }
+
+    .digiySeal.green{
+      color:#bbf7d0;
+      border-color:rgba(34,197,94,.34);
+      background:rgba(34,197,94,.12);
+      text-transform:none;
+      letter-spacing:0;
+    }
+
+    .digiyOfficialText{
+      color:#f8fafc;
+      font-size:17px;
+      line-height:1.55;
+      font-weight:900;
+    }
+
+    .digiyOfficialText strong{
+      color:var(--gold2);
+      font-weight:1000;
+    }
+
+    .digiyQrSeal{
+      display:grid;
+      gap:7px;
+      padding:12px;
+      border-radius:18px;
+      border:1px solid rgba(243,212,107,.30);
+      background:rgba(0,0,0,.22);
+      color:#f8fafc;
+      font-size:15px;
+      line-height:1.45;
+      font-weight:900;
+    }
+
+    .digiyQrSeal strong{
+      color:var(--gold2);
+      font-weight:1000;
+    }
+
     @media(max-width:980px){.hero{grid-template-columns:1fr}}
     @media(max-width:640px){
       .wrap{padding:12px 10px 36px}
@@ -471,6 +547,8 @@
 
           <div class="chips">
             <span class="chip ok">Contact direct</span>
+            <span class="chip ok">QR officiel DIGIY</span>
+            <span class="chip ok">0% commission</span>
             <span class="chip">Plomberie</span>
             <span class="chip">Dépannage</span>
             <span class="chip">Installation</span>
@@ -483,17 +561,34 @@
             et petits chantiers sanitaires. Le client voit le métier, la zone, le contact et peut ouvrir
             la demande en gardant la fiche sous la main.
           </div>
+
+          <div class="digiyOfficial" aria-label="Empreinte officielle DIGIYLYFE">
+            <div class="digiyOfficialTop">
+              <span class="digiySeal">▣ QR officiel DIGIYLYFE</span>
+              <span class="digiySeal green">Contact direct · 0% commission</span>
+            </div>
+            <div class="digiyOfficialText">
+              Cette fiche est une route directe entre le client et le professionnel :
+              métier clair, zone claire, WhatsApp, demande de besoin et partage terrain.
+              <strong>La valeur du business reste dans la main du pro local.</strong>
+            </div>
+          </div>
         </div>
       </main>
 
       <aside class="panel side">
         <article class="qrCard" id="qr" aria-label="QR de la fiche Helage">
-          <div class="qrKicker">📲 QR fiche</div>
+          <div class="qrKicker">📲 QR officiel DIGIYLYFE</div>
           <a id="qrAnchor" href="#" target="_blank" rel="noopener">
             <img id="qrImg" class="qrImg" alt="QR fiche Helage DIGIY BUILD">
           </a>
-          <div class="qrTitle">Scanne cette fiche</div>
-          <div class="qrText">Ce QR ouvre directement la fiche Helage. Lecture, partage, affichage terrain.</div>
+          <div class="qrTitle">Scanne la fiche officielle</div>
+          <div class="qrText">Ce QR ouvre directement la fiche officielle Helage : métier, zone, contact direct, demande et partage terrain.</div>
+          <div class="digiyQrSeal">
+            <div><strong>Fiche pro terrain · DIGIY BUILD</strong></div>
+            <div>Contact direct · demande directe · 0% commission.</div>
+            <div>La valeur du business reste dans la main du pro local.</div>
+          </div>
           <div class="qrLink" id="qrLinkText">Préparation du lien…</div>
         </article>
 
@@ -525,7 +620,7 @@
     </section>
 
     <div class="foot">
-      DIGIY BUILD • fiche publique • QR visible • métier clair • secteur • contact direct
+      DIGIY BUILD • fiche publique officielle • QR DIGIY visible • métier clair • secteur • contact direct • demande directe • 0% commission • sans PIN
     </div>
   </div>
 
@@ -557,7 +652,7 @@
       const profileUrl = currentUrl();
 
       function whatsappUrl(){
-        const msg = encodeURIComponent(`Bonjour ${NAME}, je viens de DIGIYLYFE pour votre service ${TRADE}.`);
+        const msg = encodeURIComponent(`Bonjour ${NAME}, je viens de votre fiche officielle DIGIYLYFE pour votre service ${TRADE}.`);
         return `https://wa.me/${PHONE}?text=${msg}`;
       }
 
@@ -613,7 +708,7 @@
           if(navigator.share){
             await navigator.share({
               title:`${NAME} — DIGIY BUILD`,
-              text:`${TRADE} · Saly · Contact direct`,
+              text:`${TRADE} · Saly · contact direct · 0% commission · QR officiel DIGIYLYFE`,
               url:profileUrl
             });
             return;
@@ -642,3 +737,4 @@
   <script src="https://pro-action-digiy.digiylyfe.com/assets/js/digiy-retour-voix.js?v=retour-voix-20260606-v4" defer></script>
 </body>
 </html>
+
