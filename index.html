@@ -1,23 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Helage — Plombier multi-services | DIGIYLYFE</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="Helage, plombier multi-services à Saly et Petite Côte. Dépannage, installation, salle de bain, contact direct.">
-  <meta name="theme-color" content="#06130f">
-
-  <meta property="og:title" content="Helage — Plombier multi-services">
-  <meta property="og:description" content="Dépannage, installation, salle de bain · Saly · Contact direct">
-  <meta property="og:image" content="https://digiylyfe.net/wp-content/uploads/2026/05/ChatGPT-Image-14-mai-2026-04_01_44.png">
-  <meta property="og:type" content="website">
-
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-  <style>
+<meta charset="utf-8"/>
+<title>Helage — Plombier multi-services | DIGIYLYFE</title>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="Helage, plombier multi-services à Saly et Petite Côte. Dépannage, installation, salle de bain, contact direct." name="description"/>
+<meta content="#06130f" name="theme-color"/>
+<meta content="Helage — Plombier multi-services" property="og:title"/>
+<meta content="Dépannage, installation, salle de bain · Saly · Contact direct" property="og:description"/>
+<meta content="https://digiylyfe.net/wp-content/uploads/2026/05/ChatGPT-Image-14-mai-2026-04_01_44.png" property="og:image"/>
+<meta content="website" property="og:type"/>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<style>
     :root{
       --bg:#06130f;
       --card:#0b241b;
@@ -511,131 +509,153 @@
       .btn{width:100%;min-height:62px;font-size:18px}
       .qrImg{width:min(82vw,270px)}
     }
-  </style>
-</head>
+  
 
+    .langSwitch{
+      display:inline-flex;
+      align-items:center;
+      gap:5px;
+      padding:5px;
+      border-radius:999px;
+      border:1px solid rgba(243,212,107,.30);
+      background:rgba(255,255,255,.055);
+      box-shadow:0 10px 24px rgba(0,0,0,.18);
+    }
+    .langSwitch button{
+      border:0;
+      min-height:42px;
+      padding:0 14px;
+      border-radius:999px;
+      background:transparent;
+      color:var(--ink);
+      cursor:pointer;
+      font-weight:1000;
+      font-size:14px;
+      font-family:var(--font);
+    }
+    .langSwitch button.active{
+      background:linear-gradient(135deg,var(--orange),var(--gold2));
+      color:#13200d;
+    }
+    @media(max-width:640px){
+      .langSwitch{
+        width:100%;
+        justify-content:center;
+        order:5;
+      }
+      .langSwitch button{
+        flex:1;
+      }
+    }
+</style>
+<meta content="helage-fr-en-20260620" name="digiy-build"/></head>
 <body>
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <div class="logo">
-          <img src="https://digiylyfe.net/wp-content/uploads/2026/03/digiylyfe_logo_qr.jpeg" alt="Logo DIGIYLYFE">
-        </div>
-        <div>
-          <div class="kicker">Je propose mes services</div>
-          <div class="title">Helage</div>
-          <div class="sub">Plombier multi-services · Saly · Petite Côte</div>
-        </div>
-      </div>
-
-      <div class="topActions">
-        <a class="btn secondary" href="https://build.digiylyfe.com/listing.html">Retour galerie</a>
-        <a class="btn secondary" href="https://digiylyfe.com/">Site</a>
-        <a class="btn secondary" href="https://digiy-hub.digiylyfe.com/">HUB</a>
-      </div>
-    </header>
-
-    <section class="hero">
-      <main class="panel">
-        <div class="poster">
-          <img src="https://digiylyfe.net/wp-content/uploads/2026/05/ChatGPT-Image-14-mai-2026-04_01_44.png" alt="Helage — plombier multi-services" loading="eager">
-        </div>
-
-        <div class="body">
-          <h1>Helage</h1>
-          <p class="lead">Plombier multi-services · dépannage · installation · salle de bain</p>
-
-          <div class="chips">
-            <span class="chip ok">Contact direct</span>
-            <span class="chip ok">QR officiel DIGIY</span>
-            <span class="chip ok">0% commission</span>
-            <span class="chip">Plomberie</span>
-            <span class="chip">Dépannage</span>
-            <span class="chip">Installation</span>
-            <span class="chip">Salle de bain</span>
-            <span class="chip">Saly</span>
-          </div>
-
-          <div class="text">
+<div class="wrap">
+<header class="topbar">
+<div class="brand">
+<div class="logo">
+<img alt="Logo DIGIYLYFE" src="https://digiylyfe.net/wp-content/uploads/2026/03/digiylyfe_logo_qr.jpeg"/>
+</div>
+<div>
+<div class="kicker" data-i18n="top_kicker">Je propose mes services</div>
+<div class="title" data-i18n="top_title">Helage</div>
+<div class="sub" data-i18n="top_sub">Plombier multi-services · Saly · Petite Côte</div>
+</div>
+</div>
+<div class="topActions">
+<a class="btn secondary" data-i18n="top_gallery" href="https://build.digiylyfe.com/listing.html">Retour galerie</a>
+<a class="btn secondary" data-i18n="top_site" href="https://digiylyfe.com/">Site</a>
+<a class="btn secondary" data-i18n="top_hub" href="https://digiy-hub.digiylyfe.com/">HUB</a>
+</div>
+<div aria-label="Changer la langue" class="langSwitch"><button class="active" id="langFr" type="button">FR</button><button id="langEn" type="button">EN</button></div></header>
+<section class="hero">
+<main class="panel">
+<div class="poster">
+<img alt="Helage — plombier multi-services" loading="eager" src="https://digiylyfe.net/wp-content/uploads/2026/05/ChatGPT-Image-14-mai-2026-04_01_44.png"/>
+</div>
+<div class="body">
+<h1 data-i18n="h1_name">Helage</h1>
+<p class="lead" data-i18n="lead">Plombier multi-services · dépannage · installation · salle de bain</p>
+<div class="chips">
+<span class="chip ok" data-i18n="chip_contact">Contact direct</span>
+<span class="chip ok" data-i18n="chip_qr">QR officiel DIGIY</span>
+<span class="chip ok" data-i18n="chip_commission">0% commission</span>
+<span class="chip" data-i18n="chip_plumbing">Plomberie</span>
+<span class="chip" data-i18n="chip_repair">Dépannage</span>
+<span class="chip" data-i18n="chip_install">Installation</span>
+<span class="chip" data-i18n="chip_bath">Salle de bain</span>
+<span class="chip" data-i18n="chip_saly">Saly</span>
+</div>
+<div class="text" data-i18n="main_text">
             Dépannage fuites, robinets, WC, installation douche, lavabo, chauffe-eau, désengorgement
             et petits chantiers sanitaires. Le client voit le métier, la zone, le contact et peut ouvrir
             la demande en gardant la fiche sous la main.
           </div>
-
-          <div class="digiyOfficial" aria-label="Empreinte officielle DIGIYLYFE">
-            <div class="digiyOfficialTop">
-              <span class="digiySeal">▣ QR officiel DIGIYLYFE</span>
-              <span class="digiySeal green">Contact direct · 0% commission</span>
-            </div>
-            <div class="digiyOfficialText">
+<div aria-label="Empreinte officielle DIGIYLYFE" class="digiyOfficial">
+<div class="digiyOfficialTop">
+<span class="digiySeal" data-i18n="official_qr_badge">▣ QR officiel DIGIYLYFE</span>
+<span class="digiySeal green" data-i18n="official_contact_badge">Contact direct · 0% commission</span>
+</div>
+<div class="digiyOfficialText" data-i18n-html="official_text">
               Cette fiche est une route directe entre le client et le professionnel :
               métier clair, zone claire, WhatsApp, demande de besoin et partage terrain.
               <strong>La valeur du business reste dans la main du pro local.</strong>
-            </div>
-          </div>
-        </div>
-      </main>
-
-      <aside class="panel side">
-        <article class="qrCard" id="qr" aria-label="QR de la fiche Helage">
-          <div class="qrKicker">📲 QR officiel DIGIYLYFE</div>
-          <a id="qrAnchor" href="#" target="_blank" rel="noopener">
-            <img id="qrImg" class="qrImg" alt="QR fiche Helage DIGIY BUILD">
-          </a>
-          <div class="qrTitle">Scanne la fiche officielle</div>
-          <div class="qrText">Ce QR ouvre directement la fiche officielle Helage : métier, zone, contact direct, demande et partage terrain.</div>
-          <div class="digiyQrSeal">
-            <div><strong>Fiche pro terrain · DIGIY BUILD</strong></div>
-            <div>Contact direct · demande directe · 0% commission.</div>
-            <div>La valeur du business reste dans la main du pro local.</div>
-          </div>
-          <div class="qrLink" id="qrLinkText">Préparation du lien…</div>
-        </article>
-
-        <div class="miniStat">
-          <div class="miniLabel">Métier</div>
-          <div class="miniValue">Plombier multi-services</div>
-          <div class="miniHint">Dépannage, installation, salle de bain et petits chantiers sanitaires.</div>
-        </div>
-
-        <div class="miniStat">
-          <div class="miniLabel">Zone</div>
-          <div class="miniValue">Saly · Petite Côte</div>
-          <div class="miniHint">Intervention selon disponibilité et besoin du client.</div>
-        </div>
-
-        <div class="miniStat">
-          <div class="miniLabel">Contact direct</div>
-          <div class="miniValue">WhatsApp disponible</div>
-          <div class="miniHint">Le client écrit directement au professionnel.</div>
-        </div>
-
-        <div class="actions">
-          <a id="waBtn" class="btn primary" href="#">💬 WhatsApp direct</a>
-          <a class="btn secondary" href="https://build.digiylyfe.com/request.html?slug=partenaires-helage-plombier&nom=Helage&metier=Plomberie&ville=Saly">📄 Décrire mon besoin</a>
-          <button class="btn secondary" id="copyBtn" type="button">📋 Copier la fiche</button>
-          <button class="btn green" id="shareBtn" type="button">📤 Partager</button>
-        </div>
-      </aside>
-    </section>
-
-    <div class="foot">
+</div>
+</div>
+</div>
+</main>
+<aside class="panel side">
+<article aria-label="QR de la fiche Helage" class="qrCard" id="qr">
+<div class="qrKicker" data-i18n="qr_kicker">📲 QR officiel DIGIYLYFE</div>
+<a href="#" id="qrAnchor" rel="noopener" target="_blank">
+<img alt="QR fiche Helage DIGIY BUILD" class="qrImg" id="qrImg"/>
+</a>
+<div class="qrTitle" data-i18n="qr_title">Scanne la fiche officielle</div>
+<div class="qrText" data-i18n="qr_text">Ce QR ouvre directement la fiche officielle Helage : métier, zone, contact direct, demande et partage terrain.</div>
+<div class="digiyQrSeal">
+<div data-i18n-html="qr_seal_1"><strong>Fiche pro terrain · DIGIY BUILD</strong></div>
+<div data-i18n="qr_seal_2">Contact direct · demande directe · 0% commission.</div>
+<div data-i18n="qr_seal_3">La valeur du business reste dans la main du pro local.</div>
+</div>
+<div class="qrLink" id="qrLinkText">Préparation du lien…</div>
+</article>
+<div class="miniStat">
+<div class="miniLabel" data-i18n="mini_trade_label">Métier</div>
+<div class="miniValue" data-i18n="mini_trade_value">Plombier multi-services</div>
+<div class="miniHint" data-i18n="mini_trade_hint">Dépannage, installation, salle de bain et petits chantiers sanitaires.</div>
+</div>
+<div class="miniStat">
+<div class="miniLabel" data-i18n="mini_zone_label">Zone</div>
+<div class="miniValue" data-i18n="mini_zone_value">Saly · Petite Côte</div>
+<div class="miniHint" data-i18n="mini_zone_hint">Intervention selon disponibilité et besoin du client.</div>
+</div>
+<div class="miniStat">
+<div class="miniLabel" data-i18n="mini_contact_label">Contact direct</div>
+<div class="miniValue" data-i18n="mini_contact_value">WhatsApp disponible</div>
+<div class="miniHint" data-i18n="mini_contact_hint">Le client écrit directement au professionnel.</div>
+</div>
+<div class="actions">
+<a class="btn primary" data-i18n="btn_whatsapp" href="#" id="waBtn">💬 WhatsApp direct</a>
+<a class="btn secondary" data-i18n="btn_need" href="https://build.digiylyfe.com/request.html?slug=partenaires-helage-plombier&amp;nom=Helage&amp;metier=Plomberie&amp;ville=Saly">📄 Décrire mon besoin</a>
+<button class="btn secondary" data-i18n="btn_copy" id="copyBtn" type="button">📋 Copier la fiche</button>
+<button class="btn green" data-i18n="btn_share" id="shareBtn" type="button">📤 Partager</button>
+</div>
+</aside>
+</section>
+<div class="foot" data-i18n="footer_note">
       DIGIY BUILD • fiche publique officielle • QR DIGIY visible • métier clair • secteur • contact direct • demande directe • 0% commission • sans PIN
     </div>
-  </div>
-
-  <nav class="bottomNav" aria-label="Navigation Helage">
-    <div class="bottomInner">
-      <a href="https://build.digiylyfe.com/listing.html"><span class="ico">←</span><span>Galerie</span></a>
-      <a class="active" href="#qr"><span class="ico">📲</span><span>QR</span></a>
-      <a id="bottomWa" href="#"><span class="ico">💬</span><span>WhatsApp</span></a>
-      <button id="bottomShare" type="button"><span class="ico">📤</span><span>Partager</span></button>
-    </div>
-  </nav>
-
-  <div class="toast" id="toast">Lien copié</div>
-
-  <script>
+</div>
+<nav aria-label="Navigation Helage" class="bottomNav">
+<div class="bottomInner">
+<a href="https://build.digiylyfe.com/listing.html"><span class="ico">←</span><span data-i18n="bottom_gallery">Galerie</span></a>
+<a class="active" href="#qr"><span class="ico">📲</span><span data-i18n="bottom_qr">QR</span></a>
+<a href="#" id="bottomWa"><span class="ico">💬</span><span data-i18n="bottom_whatsapp">WhatsApp</span></a>
+<button id="bottomShare" type="button"><span class="ico">📤</span><span data-i18n="bottom_share">Partager</span></button>
+</div>
+</nav>
+<div class="toast" data-i18n="toast_copy" id="toast">Lien copié</div>
+<script>
     (function(){
       "use strict";
 
@@ -734,7 +754,234 @@
       setQr();
     })();
   </script>
-  <script src="https://pro-action-digiy.digiylyfe.com/assets/js/digiy-retour-voix.js?v=retour-voix-20260606-v4" defer></script>
+<script>
+(function(){
+  "use strict";
+
+  const PHONE = "221774513523";
+  const PROFILE_URL = "https://helage-plombier.digiylyfe.com/";
+
+  const TXT = {
+    fr:{
+      htmlLang:"fr",
+      title:"Helage — Plombier multi-services | DIGIYLYFE",
+      desc:"Helage, plombier multi-services à Saly et Petite Côte. Dépannage, installation, salle de bain, contact direct.",
+      ogTitle:"Helage — Plombier multi-services",
+      ogDesc:"Dépannage, installation, salle de bain · Saly · Contact direct",
+      waMsg:"Bonjour Helage, je viens de votre fiche officielle DIGIYLYFE pour votre service Plombier multi-services.",
+      shareTitle:"Helage — DIGIY BUILD",
+      shareText:"Plombier multi-services · Saly · contact direct · 0% commission · QR officiel DIGIYLYFE",
+      top_kicker:"Je propose mes services",
+      top_title:"Helage",
+      top_sub:"Plombier multi-services · Saly · Petite Côte",
+      top_gallery:"Retour galerie",
+      top_site:"Site",
+      top_hub:"HUB",
+      h1_name:"Helage",
+      lead:"Plombier multi-services · dépannage · installation · salle de bain",
+      chip_contact:"Contact direct",
+      chip_qr:"QR officiel DIGIY",
+      chip_commission:"0% commission",
+      chip_plumbing:"Plomberie",
+      chip_repair:"Dépannage",
+      chip_install:"Installation",
+      chip_bath:"Salle de bain",
+      chip_saly:"Saly",
+      main_text:"Dépannage fuites, robinets, WC, installation douche, lavabo, chauffe-eau, désengorgement et petits chantiers sanitaires. Le client voit le métier, la zone, le contact et peut ouvrir la demande en gardant la fiche sous la main.",
+      official_qr_badge:"▣ QR officiel DIGIYLYFE",
+      official_contact_badge:"Contact direct · 0% commission",
+      official_text:'Cette fiche est une route directe entre le client et le professionnel : métier clair, zone claire, WhatsApp, demande de besoin et partage terrain. <strong>La valeur du business reste dans la main du pro local.</strong>',
+      qr_kicker:"📲 QR officiel DIGIYLYFE",
+      qr_title:"Scanne la fiche officielle",
+      qr_text:"Ce QR ouvre directement la fiche officielle Helage : métier, zone, contact direct, demande et partage terrain.",
+      qr_seal_1:"<strong>Fiche pro terrain · DIGIY BUILD</strong>",
+      qr_seal_2:"Contact direct · demande directe · 0% commission.",
+      qr_seal_3:"La valeur du business reste dans la main du pro local.",
+      mini_trade_label:"Métier",
+      mini_trade_value:"Plombier multi-services",
+      mini_trade_hint:"Dépannage, installation, salle de bain et petits chantiers sanitaires.",
+      mini_zone_label:"Zone",
+      mini_zone_value:"Saly · Petite Côte",
+      mini_zone_hint:"Intervention selon disponibilité et besoin du client.",
+      mini_contact_label:"Contact direct",
+      mini_contact_value:"WhatsApp disponible",
+      mini_contact_hint:"Le client écrit directement au professionnel.",
+      btn_whatsapp:"💬 WhatsApp direct",
+      btn_need:"📄 Décrire mon besoin",
+      btn_copy:"📋 Copier la fiche",
+      btn_share:"📤 Partager",
+      footer_note:"DIGIY BUILD • fiche publique officielle • QR DIGIY visible • métier clair • secteur • contact direct • demande directe • 0% commission • sans PIN",
+      bottom_gallery:"Galerie",
+      bottom_qr:"QR",
+      bottom_whatsapp:"WhatsApp",
+      bottom_share:"Partager",
+      toast_copy:"Lien copié",
+      toast_shared:"Lien copié",
+      prompt_copy:"Copie le lien :"
+    },
+    en:{
+      htmlLang:"en",
+      title:"Helage — Multi-service Plumber | DIGIYLYFE",
+      desc:"Helage, multi-service plumber in Saly and on the Petite Côte. Repairs, installation, bathroom work and direct contact.",
+      ogTitle:"Helage — Multi-service Plumber",
+      ogDesc:"Repairs, installation, bathroom work · Saly · Direct contact",
+      waMsg:"Hello Helage, I’m coming from your official DIGIYLYFE card for your multi-service plumbing work.",
+      shareTitle:"Helage — DIGIY BUILD",
+      shareText:"Multi-service plumber · Saly · direct contact · 0% commission · official DIGIYLYFE QR",
+      top_kicker:"I offer my services",
+      top_title:"Helage",
+      top_sub:"Multi-service plumber · Saly · Petite Côte",
+      top_gallery:"Back to gallery",
+      top_site:"Site",
+      top_hub:"HUB",
+      h1_name:"Helage",
+      lead:"Multi-service plumber · repairs · installation · bathroom",
+      chip_contact:"Direct contact",
+      chip_qr:"Official DIGIY QR",
+      chip_commission:"0% commission",
+      chip_plumbing:"Plumbing",
+      chip_repair:"Repairs",
+      chip_install:"Installation",
+      chip_bath:"Bathroom",
+      chip_saly:"Saly",
+      main_text:"Leak repairs, taps, toilets, shower installation, sinks, water heaters, drain unclogging and small sanitary works. The client sees the trade, the area and the contact, then opens the request while keeping the card at hand.",
+      official_qr_badge:"▣ Official DIGIYLYFE QR",
+      official_contact_badge:"Direct contact · 0% commission",
+      official_text:'This card is a direct route between the client and the professional: clear trade, clear area, WhatsApp, need request and field sharing. <strong>The value of the business stays in the local pro’s hands.</strong>',
+      qr_kicker:"📲 Official DIGIYLYFE QR",
+      qr_title:"Scan the official card",
+      qr_text:"This QR opens the official Helage card directly: trade, area, direct contact, request and field sharing.",
+      qr_seal_1:"<strong>Field pro card · DIGIY BUILD</strong>",
+      qr_seal_2:"Direct contact · direct request · 0% commission.",
+      qr_seal_3:"The value of the business stays in the local pro’s hands.",
+      mini_trade_label:"Trade",
+      mini_trade_value:"Multi-service plumber",
+      mini_trade_hint:"Repairs, installation, bathroom work and small sanitary jobs.",
+      mini_zone_label:"Area",
+      mini_zone_value:"Saly · Petite Côte",
+      mini_zone_hint:"Intervention depends on availability and the client’s need.",
+      mini_contact_label:"Direct contact",
+      mini_contact_value:"WhatsApp available",
+      mini_contact_hint:"The client writes directly to the professional.",
+      btn_whatsapp:"💬 Direct WhatsApp",
+      btn_need:"📄 Describe my need",
+      btn_copy:"📋 Copy the card",
+      btn_share:"📤 Share",
+      footer_note:"DIGIY BUILD • official public card • visible DIGIY QR • clear trade • area • direct contact • direct request • 0% commission • no PIN",
+      bottom_gallery:"Gallery",
+      bottom_qr:"QR",
+      bottom_whatsapp:"WhatsApp",
+      bottom_share:"Share",
+      toast_copy:"Link copied",
+      toast_shared:"Link copied",
+      prompt_copy:"Copy the link:"
+    }
+  };
+
+  let currentLang = "fr";
+
+  function pack(){ return TXT[currentLang] || TXT.fr; }
+
+  function cleanUrl(){
+    try{
+      const u = new URL(location.href);
+      ["phone","tel","owner_phone","contact_phone","whatsapp","return","from","pin","token","lang"].forEach(k => u.searchParams.delete(k));
+      return u.toString();
+    }catch(_){
+      return PROFILE_URL;
+    }
+  }
+
+  function whatsappUrl(){
+    return "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(pack().waMsg);
+  }
+
+  function showToast(text){
+    const t = document.getElementById("toast");
+    if(!t) return;
+    t.textContent = text || pack().toast_copy;
+    t.classList.add("show");
+    clearTimeout(showToast._timer);
+    showToast._timer = setTimeout(() => t.classList.remove("show"), 1900);
+  }
+
+  async function copyLink(){
+    const value = cleanUrl();
+    try{
+      await navigator.clipboard.writeText(value);
+      showToast(pack().toast_copy);
+    }catch(_){
+      window.prompt(pack().prompt_copy, value);
+    }
+  }
+
+  async function shareLink(){
+    const url = cleanUrl();
+    try{
+      if(navigator.share){
+        await navigator.share({
+          title: pack().shareTitle,
+          text: pack().shareText,
+          url
+        });
+        return;
+      }
+    }catch(_){}
+    copyLink();
+  }
+
+  function setMeta(selector, attr, value){
+    const el = document.querySelector(selector);
+    if(el) el.setAttribute(attr, value);
+  }
+
+  function applyLang(lang){
+    currentLang = lang === "en" ? "en" : "fr";
+    const P = pack();
+
+    document.documentElement.setAttribute("lang", P.htmlLang);
+    document.title = P.title;
+    setMeta('meta[name="description"]', "content", P.desc);
+    setMeta('meta[property="og:title"]', "content", P.ogTitle);
+    setMeta('meta[property="og:description"]', "content", P.ogDesc);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+      const key = el.getAttribute("data-i18n");
+      if(P[key] != null) el.textContent = P[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach(el => {
+      const key = el.getAttribute("data-i18n-html");
+      if(P[key] != null) el.innerHTML = P[key];
+    });
+
+    document.getElementById("langFr")?.classList.toggle("active", currentLang === "fr");
+    document.getElementById("langEn")?.classList.toggle("active", currentLang === "en");
+
+    const wa = whatsappUrl();
+    const waBtn = document.getElementById("waBtn");
+    const bottomWa = document.getElementById("bottomWa");
+    if(waBtn) waBtn.href = wa;
+    if(bottomWa) bottomWa.href = wa;
+
+    const copyBtn = document.getElementById("copyBtn");
+    const shareBtn = document.getElementById("shareBtn");
+    const bottomShare = document.getElementById("bottomShare");
+    if(copyBtn) copyBtn.onclick = copyLink;
+    if(shareBtn) shareBtn.onclick = shareLink;
+    if(bottomShare) bottomShare.onclick = shareLink;
+
+    const toast = document.getElementById("toast");
+    if(toast) toast.textContent = P.toast_copy;
+  }
+
+  document.addEventListener("DOMContentLoaded", function(){
+    document.getElementById("langFr")?.addEventListener("click", () => applyLang("fr"));
+    document.getElementById("langEn")?.addEventListener("click", () => applyLang("en"));
+    applyLang("fr");
+  });
+})();
+</script><script defer="" src="https://pro-action-digiy.digiylyfe.com/assets/js/digiy-retour-voix.js?v=retour-voix-20260606-v4"></script>
 </body>
 </html>
+
 
