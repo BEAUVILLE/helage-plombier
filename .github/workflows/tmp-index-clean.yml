@@ -1,0 +1,77 @@
+name: Temporary Helage index cleanup
+
+on:
+  push:
+    branches: [tmp-adherent-fix-20260814]
+    paths:
+      - '.github/workflows/tmp-index-clean.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp-adherent-fix-20260814
+          fetch-depth: 0
+      - name: Neutralize status wording in index
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          reps={
+            'QR officiel DIGI':'QR DIGIY',
+            'Marque mère officielle':'ADHÉRENT DIGIYLYFE',
+            'Empreinte officielle DIGIYLYFE':'Empreinte DIGIYLYFE',
+            '▣ QR officiel DIGIYLYFE':'▣ ADHÉRENT DIGIYLYFE',
+            '📲 QR officiel DIGIYLYFE':'📲 QR DIGIYLYFE',
+            'Scanne la fiche officielle':'Scanne la fiche DIGIYLYFE',
+            'fiche officielle Helage':'fiche DIGIYLYFE Helage',
+            'fiche publique officielle':'fiche publique · ADHÉRENT DIGIYLYFE',
+            'Maison mère officielle':'Helage adhérent DIGIYLYFE',
+            'Maison mère :':'DIGIYLYFE :',
+            'je viens de votre fiche officielle DIGIYLYFE':'je viens de votre fiche DIGIYLYFE',
+            'QR officiel DIGIYLYFE':'QR DIGIYLYFE',
+            'official DIGIYLYFE card':'DIGIYLYFE card',
+            'official DIGIYLYFE.COM QR':'DIGIYLYFE QR',
+            'Official DIGIY QR':'DIGIY QR',
+            '▣ Official DIGIYLYFE QR':'▣ DIGIYLYFE MEMBER',
+            '📲 Official DIGIYLYFE QR':'📲 DIGIYLYFE QR',
+            'Scan the official card':'Scan the DIGIYLYFE card',
+            'official Helage card':'DIGIYLYFE Helage card',
+            'official public card':'DIGIYLYFE member card',
+            'Mother brand:':'DIGIYLYFE:',
+            'brand_band_label:"Marque mère officielle"':'brand_band_label:"DIGIYLYFE MEMBER"'
+          }
+          for a,b in reps.items():
+              s=s.replace(a,b)
+
+          # Explicitly anchor membership in the visible French/English translation blocks.
+          s=s.replace('brand_band_label:"ADHÉRENT DIGIYLYFE"','brand_band_label:"ADHÉRENT DIGIYLYFE"',1)
+          s=s.replace('official_qr_badge:"▣ QR DIGIYLYFE"','official_qr_badge:"▣ ADHÉRENT DIGIYLYFE"',1)
+          s=s.replace('official_qr_badge:"▣ DIGIYLYFE MEMBER"','official_qr_badge:"▣ DIGIYLYFE MEMBER"',1)
+          s=s.replace('footer_note:"DIGIY BUILD • fiche publique · ADHÉRENT DIGIYLYFE','footer_note:"DIGIY BUILD • ADHÉRENT DIGIYLYFE')
+          s=s.replace('footer_note:"DIGIY BUILD • DIGIYLYFE member card','footer_note:"DIGIY BUILD • DIGIYLYFE MEMBER')
+          s=s.replace('shareText:"Multi-service plumber · Saly · direct contact · 0% commission · DIGIYLYFE QR"','shareText:"Multi-service plumber · DIGIYLYFE member · Saly · direct contact · 0% commission"')
+          s=s.replace('waMsg:"Hello Helage, I’m coming from your DIGIYLYFE card','waMsg:"Hello Helage, I’m coming from your DIGIYLYFE member card')
+          s=s.replace('text:`${TRADE} · Saly · contact direct · 0% commission · QR DIGIYLYFE`','text:`${TRADE} · adhérent DIGIYLYFE · Saly · contact direct · 0% commission`')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Validate index
+        run: |
+          grep -q 'ADHÉRENT DIGIYLYFE' index.html
+          grep -q 'DIGIYLYFE MEMBER' index.html
+          ! grep -qi 'fiche officielle' index.html
+          ! grep -qi 'QR officiel' index.html
+          ! grep -qi 'official DIGIYLYFE' index.html
+      - name: Commit index only
+        run: |
+          git config user.name 'DIGIYLYFE Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add index.html
+          git commit -m 'Helage : corriger index en adhérent DIGIYLYFE'
+          git push origin HEAD:tmp-adherent-fix-20260814
