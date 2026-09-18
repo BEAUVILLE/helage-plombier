@@ -1,0 +1,21 @@
+{
+  "name": "Helage · Plombier",
+  "short_name": "Helage Plombier",
+  "description": "Helage · Plombier · présence professionnelle propulsée par DIGIYLYFE",
+  "id": "/",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07150f",
+  "theme_color": "#126b43",
+  "lang": "fr",
+  "icons": [
+    {
+      "src": "/digiylyfe-logo-helage.jpg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
