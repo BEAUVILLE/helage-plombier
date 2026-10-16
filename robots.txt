@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://helage-plombier.digiylyfe.com/sitemap.xml
